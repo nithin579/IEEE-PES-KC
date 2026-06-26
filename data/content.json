@@ -530,9 +530,17 @@
       "imageUrl": "/execom/Abhishek S.webp", 
       "email": "",
       "linkedin": ""
+    },
+    {
+      "id": "1717000000005",
+      "name": "trail",
+      "role": "Trial Coordinator",
+      "category": "slt",
+      "status": "current",
+      "imageUrl": "",
+      "email": "trail@example.com",
+      "linkedin": ""
     }
-
-
   ],
   "chapters": [],
   "awards": [],
