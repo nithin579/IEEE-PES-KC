@@ -37,8 +37,9 @@ async function uploadFile(filePath, fileName) {
     const formData = new FormData();
     formData.append('file', blob, fileName);
     formData.append('folder', 'execom');
+    formData.append('fileName', fileName.replace(/[^a-zA-Z0-9.-]/g, '-'));
 
-    const res = await fetch(`${WORKER_URL}/upload`, {
+    const res = await fetch(WORKER_URL, {
         method: 'POST',
         headers: { Authorization: `Bearer ${BEARER}` },
         body: formData,
@@ -50,8 +51,8 @@ async function uploadFile(filePath, fileName) {
     }
 
     const json = await res.json();
-    // Worker returns { url: "https://..." }
-    if (!json.url) throw new Error(`No URL returned for "${fileName}": ${JSON.stringify(json)}`);
+    // Worker returns { success, url, path }
+    if (!json.success || !json.url) throw new Error(`Upload failed for "${fileName}": ${JSON.stringify(json)}`);
     return json.url;
 }
 
