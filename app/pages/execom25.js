@@ -38,7 +38,7 @@ const STUDENT_LEADERSHIP = [
     { name: 'FATHIMA SANA E',      role: 'Content Creator',                     imageUrl: '/images/ieee-images/execom25/Fathima Sana.jpg' },
     { name: 'SREYA B',             role: 'Documentation and Report Coordinator',imageUrl: '/images/ieee-images/execom25/Sreya.jpg' },
     { name: 'AMAL ROSH M',         role: 'Industry Internship Coordinator',     imageUrl: '/images/ieee-images/execom25/Amal Rosh.jpg' },
-    { name: 'GOKUL G K',           role: 'Webmaster',                           imageUrl: null },  // HEIF not supported by browsers — upload a jpg via admin panel
+    { name: 'GOKUL G K',           role: 'Webmaster',                           imageUrl: '/images/ieee-images/execom25/Gokul G K.jpg' },
     { name: 'JOVIN JOHN',          role: 'Webmaster',                           imageUrl: '/images/ieee-images/execom25/jovinjohn.jpg' },
     { name: 'NANDANA RAJESH',      role: 'Design Lead',                         imageUrl: '/images/ieee-images/execom25/Nandana Rajesh.jpg' },
     { name: 'BILAL M',             role: 'Design Lead',                         imageUrl: '/images/ieee-images/execom25/Bilal.jpg' },
