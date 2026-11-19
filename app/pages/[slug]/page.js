@@ -7,6 +7,7 @@ const pages = {
   'awards': dynamic(() => import('../awards')),
   'contact': dynamic(() => import('../contact')),
   'execom': dynamic(() => import('../execom')),
+  'execom25': dynamic(() => import('../execom25')),
   'gallery': dynamic(() => import('../gallery')),
   'history': dynamic(() => import('../history')),
   'initiatives': dynamic(() => import('../initiatives')),
