@@ -8,7 +8,13 @@ import styles from './Navbar.module.css';
 const NAV_LINKS = [
     { name: 'HOME', path: '/' },
     { name: 'ABOUT', path: '/pages/about' },
-    { name: 'EXCOM', path: '/pages/execom' },
+    {
+        name: 'EXCOM',
+        path: '/pages/execom',
+        dropdown: [
+            { name: 'EXCOM 25', path: '/pages/execom25' },
+        ],
+    },
     { name: 'ACTIVITIES', path: '/pages/initiatives' },
     { name: 'EVENTS', path: '/pages/upcoming-events' },
     { name: 'MEMBERSHIP', path: '/pages/membership-benefits' },
@@ -147,14 +153,37 @@ export default function Navbar() {
                 <div className={styles.navContainer}>
                     <ul className={styles.navLinks}>
                         {NAV_LINKS.map(link => (
-                            <li key={link.path}>
-                                <Link
-                                    href={link.path}
-                                    className={pathname === link.path ? styles.active : ''}
-                                >
-                                    {link.name}
-                                </Link>
-                            </li>
+                            link.dropdown ? (
+                                <li key={link.path} className={styles.dropdownItem}>
+                                    <Link
+                                        href={link.path}
+                                        className={`${styles.dropdownToggle} ${pathname.startsWith('/pages/execom') ? styles.active : ''}`}
+                                    >
+                                        {link.name} <span className={styles.dropdownCaret}>▾</span>
+                                    </Link>
+                                    <ul className={styles.dropdownMenu}>
+                                        {link.dropdown.map(sub => (
+                                            <li key={sub.path}>
+                                                <Link
+                                                    href={sub.path}
+                                                    className={pathname === sub.path ? styles.active : ''}
+                                                >
+                                                    {sub.name}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            ) : (
+                                <li key={link.path}>
+                                    <Link
+                                        href={link.path}
+                                        className={pathname === link.path ? styles.active : ''}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                </li>
+                            )
                         ))}
                     </ul>
 
@@ -213,6 +242,21 @@ export default function Navbar() {
                             >
                                 {link.name}
                             </Link>
+                            {link.dropdown && (
+                                <ul className={styles.mobileSubList}>
+                                    {link.dropdown.map(sub => (
+                                        <li key={sub.path}>
+                                            <Link
+                                                href={sub.path}
+                                                className={pathname === sub.path ? styles.active : ''}
+                                                onClick={() => setIsMenuOpen(false)}
+                                            >
+                                                {sub.name}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </li>
                     ))}
                     <li>

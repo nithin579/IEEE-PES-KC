@@ -300,3 +300,91 @@
     background-color: #5a9641;
     color: #ffffff !important;
 }
+
+/* ── Dropdown (desktop) ─────────────────────────────────────────────────────── */
+.dropdownItem {
+    position: relative;
+}
+
+.dropdownToggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.dropdownCaret {
+    font-size: 10px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.dropdownItem:hover .dropdownCaret {
+    transform: rotate(180deg);
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border: 1px solid rgba(90, 150, 65, 0.25);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    min-width: 150px;
+    z-index: 2000;
+    white-space: nowrap;
+}
+
+.dropdownItem:hover .dropdownMenu,
+.dropdownItem:focus-within .dropdownMenu {
+    display: block;
+}
+
+.dropdownMenu li a {
+    display: block;
+    padding: 8px 18px;
+    color: #2d5a1f;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropdownMenu li a:hover,
+.dropdownMenu li a.active {
+    background: rgba(90, 150, 65, 0.1);
+    color: #4a7f35;
+}
+
+/* ── Mobile sub-list ─────────────────────────────────────────────────────────── */
+.mobileSubList {
+    list-style: none;
+    padding: 0 0 0 20px;
+    margin: 4px 0 6px 0;
+}
+
+.mobileSubList li a {
+    display: block;
+    padding: 6px 0;
+    color: #4a7f35;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.mobileSubList li a:hover {
+    opacity: 1;
+    color: #2b551d;
+}
