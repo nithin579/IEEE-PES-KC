@@ -25,16 +25,16 @@ const YOUNG_PROFESSIONALS = [
 const STUDENT_LEADERSHIP = [
     { name: 'ARAVIND R',           role: 'Student Representative',              imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102565602-Aravind-R.jpg' },
     { name: 'ANVITHA VINOD',       role: 'Women in Power SR',                   imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102564345-Anvitha-Vinod.jpg' },
-    { name: 'ANANDHU REGI',        role: 'Technical Coordinator',               imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102562264-Anandhu-Regi.jpg' },
-    { name: 'DEEPTHI N',           role: 'HSR Travancore Hub',                  imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102571607-Deepthi-N-.jpg' },
+    { name: 'ANANDHU REGI',        role: 'Technical Coordinator',               imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795103942531-Anandhu-Regi.jpg' },
+    { name: 'DEEPTHI N',           role: 'HSR Travancore Hub',                  imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795103944991-Deepthi-N-.jpg' },
     { name: 'ASHNA KS',            role: 'HSR Kochi Hub',                       imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102567734-Ashna-K-S.jpg' },
     { name: 'VIDHU KRISHNAN',      role: 'HSR Malabar Hub',                     imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102615429-Vidhu-Krishnan-.jpg' },
     { name: 'FISA FATHIMA FEROSZE',role: 'MDC Travancore Hub',                  imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102574659-Fisa-fathima.jpg' },
-    { name: 'JES GIGO',            role: 'MDC Kochi Hub',                       imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102600890-Jes-Gigo-.jpg' },
+    { name: 'JES GIGO',            role: 'MDC Kochi Hub',                       imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795103947397-Jes-Gigo-.jpg' },
     { name: 'SAHADIYA M',          role: 'MDC Malabar Hub',                     imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102609135-sahadiya.jpg' },
     { name: 'HARITHA K SURESH',    role: 'ECC',                                 imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102579266-haritha-K-suresh.jpg' },
     { name: 'SREEHARI R',          role: 'Newsletter Editor',                   imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102610273-Sreehari.jpg' },
-    { name: 'KRISHNENDU KV',       role: 'Content Lead',                        imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102605525-Krishnendu.jpg' },
+    { name: 'KRISHNENDU KV',       role: 'Content Lead',                        imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795103949652-Krishnendu.jpg' },
     { name: 'FATHIMA SANA E',      role: 'Content Creator',                     imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102572827-Fathima-Sana.jpg' },
     { name: 'SREYA B',             role: 'Documentation and Report Coordinator',imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102611557-Sreya.jpg' },
     { name: 'AMAL ROSH M',         role: 'Industry Internship Coordinator',     imageUrl: 'https://pub-c13015ac09ec4a868fff8c8caaa675fa.r2.dev/execom/1795102535804-Amal-Rosh.jpg' },
@@ -57,8 +57,9 @@ function MemberCard({ member }) {
                                     src={member.imageUrl}
                                     alt={member.name}
                                     fill
+                                    unoptimized
                                     sizes="(max-width: 576px) 100vw, (max-width: 768px) 50vw, (max-width: 992px) 33vw, 25vw"
-                                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                                    style={{ objectFit: 'cover', objectPosition: 'center center' }}
                                 />
                             ) : (
                                 <div className="execom-avatar-placeholder">
