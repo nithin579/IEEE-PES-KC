@@ -7,10 +7,8 @@ const DIR = path.join(__dirname, '../public/images/ieee-images/execom25');
 const PAGE_FILE = path.join(__dirname, '../app/pages/execom25.js');
 
 const files = [
-    { name: 'Anandhu Regi.jpg', key: 'ANANDHU REGI' },
     { name: 'Deepthi N_.jpg', key: 'DEEPTHI N' },
-    { name: 'Jes Gigo_.jpg', key: 'JES GIGO' },
-    { name: 'Krishnendu.jpg', key: 'KRISHNENDU KV' }
+    { name: 'Jes Gigo_.jpg', key: 'JES GIGO' }
 ];
 
 async function uploadOne(fileName) {
@@ -39,7 +37,6 @@ async function run() {
         const url = await uploadOne(item.name);
         console.log(`  ✓ Uploaded -> ${url}`);
         
-        // Match line containing member key
         const regex = new RegExp(`(\\{ name: '${item.key}',\\s+role: '[^']+',\\s+imageUrl: ')[^']+(' \\})`);
         pageSrc = pageSrc.replace(regex, `$1${url}$2`);
     }
